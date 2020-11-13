@@ -1,0 +1,44 @@
+{
+  "name": "OctoPrint ",
+  "version": "1.0.0",
+  "slug": "octoprint",
+  "description": "OctoPi allows you to host a Server, accessing your 3D Printer over Network",
+  "url": "https://github.com/GitHubStefan13/hassio-addons-addon-octoprint",
+  "arch": [
+    "armhf",
+     "armv7",
+     "aarch64",
+     "amd64",
+     "i386"
+  ],
+  "startup": "system",
+  "ports": {
+    "5000/tcp": 5000
+  },
+  "ports_description": {
+    "5000/tcp": "OctoPi WebInterface"
+  },
+  "boot": "auto",
+  "host_network": true,
+  "hassio_api": true,
+  "hassio_role": "default",
+  "auth_api": true,
+  "options": {
+    "repositories": [],
+    "users": []
+  },
+  "schema": {
+    "repositories": [
+      {
+        "name": "str",
+        "read_access": "str",
+        "write access": "str"
+      }
+    ],
+    "users": [
+      {
+        "name": "str",                                                                                                          "password": "str"
+      }
+    ]
+  }
+}
