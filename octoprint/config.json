@@ -24,21 +24,7 @@
   "hassio_role": "default",
   "auth_api": true,
   "options": {
-    "repositories": [],
-    "users": []
   },
   "schema": {
-    "repositories": [
-      {
-        "name": "str",
-        "read_access": "str",
-        "write access": "str"
-      }
-    ],
-    "users": [
-      {
-        "name": "str",                                                                                                          "password": "str"
-      }
-    ]
   }
 }
