@@ -1,4 +1,4 @@
-ARG BUILD_FROM=homeassistant/base:7.0.0
+ARG BUILD_FROM=hassioaddons/base:armv7-8.0.5
 FROM ${BUILD_FROM}
 
 # Set shell
