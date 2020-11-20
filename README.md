@@ -39,6 +39,12 @@ comparison to installing any other Home Assistant add-on.
 
 ## Known issues and limitations
 
+ - Currently the OctoPrint Server DOES NOT save your Settings.
+   Once i figure out how to permanently save the Settings your best bet
+   is to Save your Configuration in the OctoPrint WebServer before 
+   restarting Hassio / the OctoPrint Addon
+   
+
 ## Changelog & Releases
 
 ## Support
