@@ -17,6 +17,7 @@ RUN apt update && apt install -y \
     && usermod -a -G octoprint octoprint \
     && usermod -a -G tty octoprint \
     && usermod -a -G dialout octoprint \
+    && usermod -a -G video octoprint \
     && mkdir /home/octoprint/OctoPrint && cd /home/octoprint/OctoPrint \
     && python3 -m venv venv \
     && source venv/bin/activate \
