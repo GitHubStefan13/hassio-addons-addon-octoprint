@@ -11,9 +11,8 @@ This add-on allows you to host a OctoPrint Server.
 
 ## About
 
-This add-on allows you to host a Lightweight Git Server, giving you access to your
-repositories/projects over ssh.
-It also includes a access control to Control who can Read/Write to repositories.
+This add-on allows you to host a OctoPrint Server, giving you access to your 3D Printer
+over Network. It also includes everything the normal OctoPrint Installtion contains.
 
 ## WARNING
 
@@ -38,13 +37,7 @@ comparison to installing any other Home Assistant add-on.
 **Note**: _Remember to restart the add-on when the configuration is changed._
 
 ## Known issues and limitations
-
- - Currently the OctoPrint Server DOES NOT save your Settings.
-   Once i figure out how to permanently save the Settings your best bet
-   is to Save your Configuration in the OctoPrint WebServer before 
-   restarting Hassio / the OctoPrint Addon
-   
-
+  
 ## Changelog & Releases
 
 ## Support
