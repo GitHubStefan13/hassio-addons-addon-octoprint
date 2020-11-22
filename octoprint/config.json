@@ -1,21 +1,100 @@
 {
   "name": "OctoPrint ",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "slug": "octoprint",
-  "description": "OctoPrint allows you to host a Server, accessing your 3D Printer over Network",
+  "description": "Control/Access your 3D Printer over Network",
   "webui": "[PROTO:ssl]://[HOST]:[PORT:5000]",
   "url": "https://github.com/GitHubStefan13/hassio-addons-addon-octoprint",
   "startup": "system",
   "arch": ["aarch64", "amd64", "armhf", "armv7", "i386"],
   "boot": "auto",
-  "usb": true,
+  "auto_uart": true,
   "video": true,
+  "map": [
+    "config:rw"
+  ],
   "ports": {
     "5000/tcp": 5000
   },
   "ports_description": {
     "5000/tcp": "OctoPrint WebInterface"
   },
-  "options": {},
-  "schema": {}
+  "options": {
+    "name": "My 3D Printer",
+    "api_key": "1234567891011121314151617181920",
+    "gCodeVisualizer": true,
+    "temperaturGraph": true,
+    "sdSupport": true,
+    "keyboardControl": true,
+    "pollWatched": false,
+    "modelSizeDetection": true,
+    "printCancelConfirmation": true,
+    "g90InfluencesExtruder": false,
+    "printer_profiles": [
+      { "id": "_default",
+        "name": "Default",
+	"color": "default",
+	"model": "Generic RepRap Printer",
+	"default": true,
+	"current": true,
+	"resource": "http://example.com/api/printerprofiles/_default",
+        "formFactor": "rectangular",
+        "origin": "lowerleft",
+        "width": 200,
+        "depth": 200,
+        "height": 200,
+        "heatedBed": true,
+        "heatedChamber": false,
+	"axes_x_speed": 6000,
+        "axes_x_inverted": false,
+	"axes_y_speed": 6000,
+	"axes_y_inverted": false,
+	"axes_z_speed": 200,
+	"axes_z_inverted": false,
+	"axes_e_speed": 300,
+	"axes_e_inverted": false,
+        "extruder_count": 1
+      }
+    ]
+  },
+  "schema": {
+    "name": "str",
+    "api_key": "str?",
+    "gCodeVisualizer": "bool?",
+    "temperatureGraph": "bool?",
+    "sdSupport": "bool?",
+    "keyboardControl": "bool?",
+    "pollWatched": "bool?",
+    "modelSizeDetection": "bool?",
+    "printCancelConfirmation": "bool?",
+    "g90InfluencesExtruder": "bool?",
+    "printer_profiles": [
+      {
+        "id": "str",
+        "name": "str",
+        "color": "str",
+        "model": "str",
+        "default": "bool",
+        "current": "bool",
+        "resource": "str?",
+        "formFactor": "str",
+        "origin": "str",
+        "width": "int",
+        "depth": "int",
+        "height": "int",
+        "heatedBed": "bool",
+        "heatedChamber": "bool",
+	"axes_x_speed": "int",
+	"axes_x_inverted": "bool",
+	"axes_y_speed": "int",
+	"axes_y_inverted": "bool",
+	"axes_z_speed": "int",
+	"axes_z_inverted": "bool",
+	"axes_e_spped": "int",
+	"axes_e_inverted": "bool",
+        "extruder_count": "int"
+      }
+    ]
+  },
+  "image": "dsgamingdev/octoprint-{arch}"
 }

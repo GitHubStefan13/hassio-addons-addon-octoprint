@@ -1,12 +1,10 @@
-#ARG BUILD_FROM
-#FROM ${BUILD_FROM}
-ARG BUILD_FROM=homeassistant/armv7-base-debian:buster
+ARG BUILD_FROM
 FROM ${BUILD_FROM}
+#ARG BUILD_FROM=homeassistant/armv7-base-debian:buster
+#FROM ${BUILD_FROM}
 
 # Set shell
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
-
-WORKDIR /data
 
 # Install requirements for add-on
 RUN apt update && apt install -y \
@@ -14,7 +12,6 @@ RUN apt update && apt install -y \
 	python3-venv \
 	git \
 	libyaml-dev \
-	build-essential \
     \
     && adduser --gecos "" --disabled-password --home /home/octoprint octoprint \
     && usermod -a -G octoprint octoprint \
