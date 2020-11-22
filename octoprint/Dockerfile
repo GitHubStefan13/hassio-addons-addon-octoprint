@@ -1,7 +1,5 @@
 ARG BUILD_FROM
 FROM ${BUILD_FROM}
-#ARG BUILD_FROM=homeassistant/armv7-base-debian:buster
-#FROM ${BUILD_FROM}
 
 # Set shell
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]

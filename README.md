@@ -32,11 +32,10 @@ comparison to installing any other Home Assistant add-on.
    in the Supervisor Tab. Reload may be necassary.
 2. Install the OctoPrint Add-On.
 
-## Configuration
-
-**Note**: _Remember to restart the add-on when the configuration is changed._
-
 ## Known issues and limitations
+  
+  - If the OctoPrint cannot find any Serial Devices you may need to restart the Addon
+	AFTER you plugged in the Cable and turned on your 3D Printer
   
 ## Changelog & Releases
 
@@ -67,16 +66,6 @@ Thank you for being involved! :heart_eyes:
 ## Authors & contributors
 
 The original setup of this repository is by [GitHubStefan13][GitHubStefan13].
-
-For a full list of all authors and contributors,
-check [the contributor's page][contributors].
-
-## We have got some Home Assistant add-ons for you
-
-Want some more functionality to your Home Assistant instance?
-
-We have created multiple add-ons for Home Assistant. For a full list, check out
-our [GitHub Repository][repository].
 
 ## License
 
@@ -112,7 +101,7 @@ SOFTWARE.
 [forum-shield]: https://img.shields.io/badge/community-forum-brightgreen.svg
 [GitHubStefan13]: https://github.com/GitHubStefan13
 [home-assistant]: https://home-assistant.io
-[issue]: https://github.com/hassio-addons/addon-ssh/issues
+[issue]: https://github.com/GitHubStefan13/repository/issues
 [keepchangelog]: http://keepachangelog.com/en/1.0.0/
 [license-shield]: https://img.shields.io/github/license/hassio-addons/addon-ssh.svg
 [maintenance-shield]: https://img.shields.io/maintenance/yes/2020.svg

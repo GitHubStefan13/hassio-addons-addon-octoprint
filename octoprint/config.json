@@ -1,6 +1,6 @@
 {
   "name": "OctoPrint ",
-  "version": "0.0.3",
+  "version": "1.0.0",
   "slug": "octoprint",
   "description": "Control/Access your 3D Printer over Network",
   "webui": "[PROTO:ssl]://[HOST]:[PORT:5000]",
