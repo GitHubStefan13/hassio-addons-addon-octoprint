@@ -90,7 +90,7 @@
 	"axes_y_inverted": "bool",
 	"axes_z_speed": "int",
 	"axes_z_inverted": "bool",
-	"axes_e_spped": "int",
+	"axes_e_speed": "int",
 	"axes_e_inverted": "bool",
         "extruder_count": "int"
       }
