@@ -4,25 +4,29 @@ FROM ${BUILD_FROM}
 # Set shell
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 
+WORKDIR /data
+
 # Install requirements for add-on
 RUN apt update && apt install -y \
 	python3-pip \
 	python3-venv \
+        python3-dev \
 	git \
 	libyaml-dev \
+        build-essential \
     \
     && adduser --gecos "" --disabled-password --home /home/octoprint octoprint \
     && usermod -a -G octoprint octoprint \
     && usermod -a -G tty octoprint \
     && usermod -a -G dialout octoprint \
     && usermod -a -G video octoprint \
-    && mkdir /home/octoprint/OctoPrint && cd /home/octoprint/OctoPrint \
+    && mkdir /data/octoprint && cd /data/octoprint \
     && python3 -m venv venv \
     && source venv/bin/activate \
     && pip install pip --upgrade \
     && pip install --no-cache-dir octoprint \
-    && chmod -R 755 /home/octoprint/OctoPrint \
-    && chown -R octoprint:octoprint /home/octoprint/OctoPrint
+    && chmod -R 755 /data/octoprint \
+    && chown -R octoprint:octoprint /data/octoprint
 
 COPY run.sh /home/octoprint
 COPY startOctoPrint.sh /home/octoprint

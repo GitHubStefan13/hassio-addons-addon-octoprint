@@ -1,1 +1,1 @@
-/home/octoprint/OctoPrint/venv/bin/octoprint -b /config/octoprint serve
+/data/octoprint/venv/bin/octoprint -b /config/octoprint serve
